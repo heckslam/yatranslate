@@ -1,5 +1,5 @@
-#Just another android translator which uses Yandex api
-###Differences in animations
+# Just another android translator which uses Yandex api
+### Differences in animations
                     
 Official yandex app  | My edition
 ------------- | -------------
@@ -7,7 +7,7 @@ Official yandex app  | My edition
 ![yandex2](/screenshots/2yandex.gif)  | ![myedition2](/screenshots/2heckslam.gif)
 
 
-###Key features
+### Key features
 * Offline caching
 * Dictionary with examples
 * Voice input
@@ -15,7 +15,7 @@ Official yandex app  | My edition
 * History
 * Favorites
 
-###Libraries
+### Libraries
 * RxJava 2
 * Dagger 2
 * Retrofit 2 and Retrofit Mock mode for debug builds
