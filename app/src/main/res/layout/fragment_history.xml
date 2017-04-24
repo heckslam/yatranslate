@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ru.devtron.yatranslate.ui.widget.RxEditText
+        android:id="@+id/history_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_48dp"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:drawableStart="@drawable/ic_search_black_24dp"
+        android:background="@drawable/input_bg_search_history"
+        android:drawablePadding="@dimen/spacing_16dp"
+        android:paddingLeft="@dimen/spacing_16dp"
+        android:hint="@string/history_search_hint"
+        android:textSize="14sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/history_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+</LinearLayout>

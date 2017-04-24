@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/pos_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_8dp"
+        android:layout_marginStart="@dimen/spacing_8dp"
+        android:fontFamily="@string/roboto_condensed"
+        android:textColor="@color/page_indicator_normal_grey"
+        android:textSize="@dimen/font_12"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1"
+        tools:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/translate_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_8dp"
+        android:layout_marginStart="@dimen/spacing_8dp"
+        android:fontFamily="@string/roboto_medium"
+        android:visibility="gone"
+        android:textIsSelectable="true"
+        android:longClickable="true"
+        app:layout_constraintLeft_toRightOf="@+id/pos_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="TextView"
+        tools:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pos_tv"/>
+
+    <TextView
+        android:id="@+id/meaning_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_8dp"
+        android:layout_marginStart="@dimen/spacing_8dp"
+        android:textColor="@color/dark_orange"
+        android:visibility="gone"
+        android:textIsSelectable="true"
+        android:longClickable="true"
+        app:layout_constraintLeft_toRightOf="@+id/pos_tv"
+        app:layout_constraintTop_toBottomOf="@+id/translate_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="TextView"
+        tools:visibility="visible"
+        android:layout_marginTop="-1dp"/>
+
+    <TextView
+        android:id="@+id/example_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_24dp"
+        android:layout_marginStart="@dimen/spacing_24dp"
+        android:visibility="gone"
+        android:textIsSelectable="true"
+        android:longClickable="true"
+        app:layout_constraintLeft_toRightOf="@+id/pos_tv"
+        app:layout_constraintTop_toBottomOf="@+id/meaning_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="TextView"
+        tools:visibility="visible"/>
+</android.support.constraint.ConstraintLayout>

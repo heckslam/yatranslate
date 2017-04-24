@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="intro_top_image_margin">64dp</dimen>
+    <dimen name="intro_max_width_height_image">260dp</dimen>
+
+    <dimen name="intro_top_text_heading">352dp</dimen>
+    <dimen name="intro_top_text_subheading">384dp</dimen>
+</resources>

@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">YaTranslate</string>
+
+    <!-- Fonts -->
+    <string name="roboto_regular">sans-serif</string>
+    <string name="roboto_light">sans-serif-light</string>
+    <string name="roboto_condensed">sans-serif-condensed</string>
+    <string name="roboto_black">sans-serif-black</string>
+    <string name="roboto_thin">sans-serif-thin</string>
+    <string name="roboto_medium">sans-serif-medium</string>
+
+    <string name="error_msg">Что-то пошло не так, попробуйте перезапустить приложение</string>
+    <string name="intro_guide_start_btn">Поехали</string>
+
+    <string name="intro_page1_heading">Offline перевод</string>
+    <string name="intro_page1_description">Сохраняйте нужную пару языков в настройках, чтобы переводить без интернета</string>
+
+    <string name="intro_page2_heading">Фотоперевод</string>
+    <string name="intro_page2_description">Перевод текста с картинки - сделайте снимок камерой или выберите изображение из галереи</string>
+
+    <string name="intro_page3_heading">Переводчик вас услышит</string>
+    <string name="intro_page3_description">Произнесите текст - он переведёт</string>
+
+    <string name="intro_action_further">Понятно</string>
+
+    <string name="enter_text_hint_et">Введите текст для перевода</string>
+    <string name="translate_input_voice_enabled_hint">Скажите что-нибудь</string>
+    <string name="toolbar_settings">Настройки</string>
+    <string name="history_search_hint">Искать в истории</string>
+    <string name="favorites_search_hint">Искать в избранном</string>
+    <string name="bookmark_action_clear">Очистить</string>
+    <string name="bookmark_dialog_clear_msg">Вы уверены, что хотите очистить %1s?</string>
+    <string name="bookmark_dialog_action_cancel">Отмена</string>
+    <string name="bookmark_dialog_action_ok">Да</string>
+
+    <string name="lang_russian">Русский</string>
+    <string name="lang_english">Английский</string>
+    <string name="transcription_tv">[%s]</string>
+</resources>

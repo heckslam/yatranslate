@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FCE06E</color>
+    <color name="colorPrimaryDark">#DFC660</color>
+    <color name="colorAccent">#f1d460</color>
+    <color name="selectable_orange">#fbc02d</color>
+    <color name="dark_orange">#ffab00</color>
+    <color name="page_indicator_current_grey">#ff222222</color>
+    <color name="page_indicator_normal_grey">#4d000000</color>
+    <color name="grey">#424242</color>
+
+    <color name="yellowLight">#ffecb3</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="tab_layout_divider">#4dbdbdbd</color>
+    <color name="tab_inactive">#bdbdbd</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>

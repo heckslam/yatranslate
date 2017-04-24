@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/from_translate_lang_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/spacing_32dp"
+                    android:layout_marginRight="@dimen/spacing_32dp"
+                    android:layout_toLeftOf="@+id/swap_language_btn"
+                    android:layout_toStartOf="@+id/swap_language_btn"
+                    android:text="@string/lang_russian"
+                    android:textAppearance="@style/TabsTitlesTextAppearance"
+                    android:textColor="@color/black"/>
+
+                <ImageButton
+                    android:id="@+id/swap_language_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ripple"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_swap_horiz_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/to_translate_lang_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/spacing_32dp"
+                    android:layout_marginStart="@dimen/spacing_32dp"
+                    android:layout_toEndOf="@id/swap_language_btn"
+                    android:layout_toRightOf="@id/swap_language_btn"
+                    android:text="@string/lang_english"
+                    android:textAppearance="@style/TabsTitlesTextAppearance"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ru.devtron.yatranslate.ui.screens.translate.TranslatePanel
+        android:id="@+id/translate_panel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/spacing_8dp"
+        android:layout_marginLeft="@dimen/spacing_8dp"
+        android:layout_marginRight="@dimen/spacing_8dp"
+        android:layout_marginStart="@dimen/spacing_8dp"
+        android:layout_marginTop="@dimen/spacing_8dp"
+        android:background="@drawable/input_text_border_container_bg_grey"
+        android:paddingBottom="4dp"
+        android:paddingLeft="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ru.devtron.yatranslate.ui.widget.RxEditText
+            android:id="@+id/translate_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:ems="16"
+            android:gravity="top"
+            android:hint="@string/enter_text_hint_et"
+            android:inputType="textMultiLine"
+            android:minHeight="130dp"
+            android:paddingBottom="24dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="@dimen/spacing_8dp"/>
+
+        <ImageButton
+            android:id="@+id/clear_btn"
+            android:layout_width="@dimen/spacing_24dp"
+            android:layout_height="@dimen/spacing_24dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_clear_black_24dp"
+            android:clickable="true"
+            android:paddingTop="@dimen/padding_8"/>
+
+        <ru.devtron.yatranslate.ui.widget.RippleBackground
+            android:id="@+id/mic_ripple_wrapper"
+            android:layout_width="60dp"
+            android:layout_height="64dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/mic_btn"
+                android:layout_width="@dimen/spacing_24dp"
+                android:layout_height="@dimen/spacing_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="@dimen/spacing_8dp"
+                android:layout_marginRight="@dimen/spacing_8dp"
+                android:layout_marginTop="@dimen/spacing_8dp"
+                android:background="@drawable/ic_mic_black_24dp"
+                android:clickable="true"/>
+
+            <ImageButton
+                android:id="@+id/play_sound_btn"
+                android:layout_width="@dimen/spacing_24dp"
+                android:layout_height="@dimen/spacing_24dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/mic_btn"
+                android:layout_marginEnd="@dimen/spacing_8dp"
+                android:layout_marginRight="@dimen/spacing_8dp"
+                android:layout_marginTop="@dimen/spacing_8dp"
+                android:background="@drawable/ic_play_black_24dp"
+                android:clickable="true"/>
+        </ru.devtron.yatranslate.ui.widget.RippleBackground>
+    </ru.devtron.yatranslate.ui.screens.translate.TranslatePanel>
+
+
+    <TextView
+        android:id="@+id/translated_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_16dp"
+        android:layout_marginStart="@dimen/spacing_16dp"
+        android:layout_marginTop="@dimen/spacing_8dp"
+        android:scrollbars="vertical"
+        android:maxLines="16"
+        android:layout_marginRight="@dimen/spacing_8dp"
+        android:layout_marginEnd="@dimen/spacing_8dp"
+        android:fontFamily="@string/roboto_medium"
+        android:longClickable="true"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/font_18"
+        app:layout_constraintLeft_toRightOf="@+id/translate_panel"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
+        app:layout_constraintRight_toLeftOf="@+id/translated_buttons_wrapper"
+        app:layout_constraintHorizontal_bias="1.0"/>
+
+    <TextView
+        android:id="@+id/transcription_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintLeft_toRightOf="@+id/translate_panel"
+        app:layout_constraintTop_toBottomOf="@+id/translated_tv"
+        app:layout_constraintRight_toLeftOf="@+id/translated_buttons_wrapper"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dictionary_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="@dimen/spacing_16dp"
+        android:layout_marginLeft="@dimen/spacing_16dp"
+        android:layout_marginRight="@dimen/spacing_16dp"
+        android:layout_marginStart="@dimen/spacing_16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transcription_tv"
+        app:layout_constraintLeft_toRightOf="@+id/translate_panel"/>
+
+    <LinearLayout
+        android:id="@+id/translated_buttons_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/spacing_8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
+
+        <ImageButton
+            android:id="@+id/play_translated_btn"
+            android:layout_width="@dimen/spacing_24dp"
+            android:layout_height="@dimen/spacing_24dp"
+            android:layout_marginEnd="@dimen/spacing_8dp"
+            android:layout_marginRight="@dimen/spacing_8dp"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:background="@drawable/ic_play_black_24dp"
+            android:clickable="true"/>
+
+        <CheckBox
+            android:id="@+id/favorite_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8dp"
+            android:button="@drawable/favorite_checker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_line"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+</android.support.constraint.ConstraintLayout>
